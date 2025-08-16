@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "proyectofinal-dev-9ca63"
+  },
+  "targets": {
+    "proyectofinal-dev-9ca63": {
+      "hosting": {
+        "dev": [
+          "proyectofinal-dev-9ca63"
+        ],
+        "prod": [
+          "proyectofinal-prod-9ba6b"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

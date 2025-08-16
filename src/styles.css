@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #6558c4;
+  --secondary-color: #f0f0f0;
+  --third-color: #bf71d7;
+}
+
+
+@layer components {
+  .hola {
+    @apply bg-red-500 text-white border border-green-500;
+  }
+}
+
+@layer utilities {
+  .pf-bg-primary {
+    background: var(--primary-color) !important;
+  }
+  .pf-bg-third {
+    background: var(--third-color) !important;
+  }
+  .pf-bg-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--third-color)) !important;
+  }
+  .pf-btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--third-color)) !important;
+    color: white;
+    border: none;
+    font-size: .8rem !important;
+    padding: 5px 15px;
+  }
+  .pf-btn-primary:hover {
+    background: var(--primary-color) !important;
+    color: white;
+  }
+
+  .pf-navbar a {
+    color: #000 !important;
+  }
+  .pf-navbar a.active {
+    color: var(--primary-color) !important;
+    font-weight: bold !important;
+  }
+}

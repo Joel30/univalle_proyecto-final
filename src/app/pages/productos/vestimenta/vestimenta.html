@@ -1,0 +1,25 @@
+<!-- <div class="row g-5">
+  <div
+    class="col-md-4 mb-3"
+    *ngFor="let producto of productos"
+  >
+    <div class="card h-100 shadow-none border-0">
+      <div class="overflow-hidden rounded shadow">
+        <img
+          [src]="producto.imagen"
+          class="card-img-top img-hover-zoom"
+          alt="{{ producto.nombre }}"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ producto.nombre }}</h5>
+        <p class="card-text text-info-emphasis fw-bold">Precio: ${{ producto.precio }}</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nihil cupiditate labore nisi repellendus et
+          explicabo in eius sed eum</p>
+        <button class="pf-btn-primary rounded-5">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<app-card [items]="productos"></app-card>

@@ -1,0 +1,30 @@
+<div class="row g-5">
+  <div
+    class="col-md-4 mb-3"
+    *ngFor="let item of items()"
+  >
+    <div class="card h-100 shadow-none border-0">
+      <div class="overflow-hidden rounded shadow">
+        <img
+          [src]="item.imagen"
+          class="card-img-top img-hover-zoom"
+          alt="{{ item.nombre }}"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ item.nombre }}</h5>
+        <p
+          *ngIf="item.descuento"
+          class="text-danger"
+        ><span class="badge bg-danger">-{{ item.descuento }}%</span> Oferta única</p>
+        <p
+          *ngIf="!item.descuento"
+          class="card-text text-info-emphasis fw-bold"
+        >Precio: ${{ item.precio }}</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nihil cupiditate labore nisi repellendus et
+          explicabo in eius sed eum</p>
+        <button class="pf-btn-primary rounded-5">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</div>

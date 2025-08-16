@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand pf-bg-gradient navbar-dark">
+  <div class="container">
+    <a
+      class="navbar-brand"
+      href="#"
+    >NOVA-SHOP</a>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
+
+      <form
+        class="d-flex ms-auto"
+        role="search"
+      >
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button
+          class="btn btn-outline-light"
+          type="submit"
+        >Search</button>
+        <!-- Carrito con badge -->
+        <div
+          style="position:relative; display:inline-block; line-height:0;"
+          class="text-white ms-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="36"
+            height="36"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 3h2.2c.4 0 .76.27.88.66L7 6" />
+            <path d="M7 6h14l-1.4 7.2a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L6.2 8.5" />
+            <path d="M7 6l1.2 6.2" />
+            <circle
+              cx="10"
+              cy="19"
+              r="1.6"
+            />
+            <circle
+              cx="18"
+              cy="19"
+              r="1.6"
+            />
+          </svg>
+          <span
+            aria-label="Artículos en el carrito"
+            style="position:absolute; top:-4px; right:-4px; display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; font: 700 11px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--primary-color); background:#ffffff; border-radius:999px;"
+          >0</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar pf-navbar navbar-expand bg-body-secondary p-0">
+  <div class="container">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a
+          routerLink="/productos"
+          routerLinkActive="active"
+          class="nav-link"
+        >Productos</a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          routerLink="/ofertas"
+          routerLinkActive="active"
+          class="nav-link"
+        >Ofertas del día</a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/servicios"
+          routerLinkActive="active"
+          class="nav-link"
+        >Servicio al Cliente</a>
+      </li>
+    </ul>
+  </div>
+</nav>
