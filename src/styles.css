@@ -1,15 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary-color: #6558c4;
+  --primary-color: #11998e;
   --secondary-color: #f0f0f0;
-  --third-color: #bf71d7;
-}
-
-
-@layer components {
-  .hola {
-    @apply bg-red-500 text-white border border-green-500;
-  }
+  --third-color: #38ef7d;
 }
 
 @layer utilities {
@@ -40,5 +33,7 @@
   .pf-navbar a.active {
     color: var(--primary-color) !important;
     font-weight: bold !important;
+    text-decoration: underline !important;
+    text-underline-offset: 5px;
   }
 }

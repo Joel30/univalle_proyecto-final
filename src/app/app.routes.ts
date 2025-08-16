@@ -1,26 +1,40 @@
 import { Routes } from '@angular/router';
-import { Ofertas } from './pages/ofertas/ofertas';
-import { ElectronicaTecnologia } from './pages/productos/electronica-tecnologia/electronica-tecnologia';
-import { Muebles } from './pages/productos/muebles/muebles';
-import { Productos } from './pages/productos/productos';
-import { Vehiculos } from './pages/productos/vehiculos/vehiculos';
-import { Vestimenta } from './pages/productos/vestimenta/vestimenta';
-import { Servicios } from './pages/servicios/servicios';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'productos/vestimenta', pathMatch: 'full' },
   {
     path: 'productos',
-    component: Productos,
+    loadComponent: () => import('./pages/productos/productos').then(m => m.Productos),
     children: [
-      { path: 'vestimenta', component: Vestimenta },
-      { path: 'muebles', component: Muebles },
-      { path: 'vehiculos', component: Vehiculos },
-      { path: 'electronica-tecnologia', component: ElectronicaTecnologia },
+      {
+        path: 'vestimenta',
+        loadComponent: () => import('./pages/productos/vestimenta/vestimenta').then(m => m.Vestimenta)
+      },
+      {
+        path: 'muebles',
+        loadComponent: () => import('./pages/productos/muebles/muebles').then(m => m.Muebles)
+      },
+      {
+        path: 'vehiculos',
+        loadComponent: () => import('./pages/productos/vehiculos/vehiculos').then(m => m.Vehiculos)
+      },
+      {
+        path: 'electronica-tecnologia',
+        loadComponent: () =>
+          import('./pages/productos/electronica-tecnologia/electronica-tecnologia').then(
+            m => m.ElectronicaTecnologia
+          )
+      },
       { path: '', redirectTo: 'vestimenta', pathMatch: 'full' }
     ]
   },
-  { path: 'ofertas', component: Ofertas },
-  { path: 'servicios', component: Servicios },
+  {
+    path: 'ofertas',
+    loadComponent: () => import('./pages/ofertas/ofertas').then(m => m.Ofertas)
+  },
+  {
+    path: 'servicios',
+    loadComponent: () => import('./pages/servicios/servicios').then(m => m.Servicios)
+  },
   { path: '**', redirectTo: 'productos/vestimenta' }
 ];

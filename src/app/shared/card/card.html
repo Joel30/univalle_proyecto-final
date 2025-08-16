@@ -9,6 +9,7 @@
           [src]="item.imagen"
           class="card-img-top img-hover-zoom"
           alt="{{ item.nombre }}"
+          loading="lazy"
         />
       </div>
       <div class="card-body">
@@ -23,7 +24,10 @@
         >Precio: ${{ item.precio }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, nihil cupiditate labore nisi repellendus et
           explicabo in eius sed eum</p>
-        <button class="pf-btn-primary rounded-5">Agregar al carrito</button>
+        <button
+          class="pf-btn-primary rounded-5"
+          ariaLabel="Agregar {{ item.nombre }} al carrito"
+        >Agregar al carrito</button>
       </div>
     </div>
   </div>
