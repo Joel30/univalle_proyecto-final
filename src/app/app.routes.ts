@@ -1,14 +1,16 @@
 import { Routes } from '@angular/router';
+import { Productos } from './pages/productos/productos';
+import { Vestimenta } from './pages/productos/vestimenta/vestimenta';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'productos/vestimenta', pathMatch: 'full' },
   {
     path: 'productos',
-    loadComponent: () => import('./pages/productos/productos').then(m => m.Productos),
+    component: Productos,
     children: [
       {
         path: 'vestimenta',
-        loadComponent: () => import('./pages/productos/vestimenta/vestimenta').then(m => m.Vestimenta)
+        component: Vestimenta
       },
       {
         path: 'muebles',
